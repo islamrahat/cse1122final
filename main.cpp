@@ -13,9 +13,9 @@
 #define MAX_EXPLOSIONS                  200
 #define MAX_PLAYERS                       2
 
-#define BUILDING_RELATIVE_ERROR          30        // Building size random range %
-#define BUILDING_MIN_RELATIVE_HEIGHT     20        // Minimum height in % of the screenHeight
-#define BUILDING_MAX_RELATIVE_HEIGHT     60        // Maximum height in % of the screenHeight
+#define BUILDING_RELATIVE_ERROR          30        // To fit up the screen widthwise
+#define BUILDING_MIN_RELATIVE_HEIGHT     20        // Lower limit for the random height
+#define BUILDING_MAX_RELATIVE_HEIGHT     60        // Upper limit for the random height
 #define BUILDING_MIN_GRAYSCALE_COLOR    120        // Minimum gray color for the buildings
 #define BUILDING_MAX_GRAYSCALE_COLOR    200        // Maximum gray color for the buildings
 
@@ -66,7 +66,7 @@ static bool pause = false;
 static Player player[MAX_PLAYERS]; 
 static Building building[MAX_BUILDINGS];    
 static Explosion explosion[MAX_EXPLOSIONS]; 
-static Ball ball; 
+static Ball ball;
 
 static int playerTurn = 0;
 static bool ballOnAir = false;
@@ -120,7 +120,6 @@ int main()
         
         UpdateDrawFrame();
     }
-        
     UnloadSound(fight);
     CloseAudioDevice();  
     CloseWindow();   
