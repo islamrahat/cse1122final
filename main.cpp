@@ -94,7 +94,7 @@ int main()
     InitWindow(screenWidth, screenHeight, "Arc Rivals");
     InitAudioDevice();
 
-    Sound fight = LoadSound("assets/fight.wav");
+    Sound fight = LoadSound("fight.wav");
        
     InitGame();
 
