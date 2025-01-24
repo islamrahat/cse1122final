@@ -14,7 +14,6 @@ int main()
     bool showMessageBoxExit = false;
     bool showMessageBoxAbout = false;
 
-    int f=1, e=1, a=1;
     while (!WindowShouldClose())
     {
         /// Draw
@@ -41,13 +40,9 @@ int main()
 
                 if(result==1) 
                 {
-                    if(f==1)
-                    {
                         CloseWindow();
                         system("./main");
                         showMessageBoxPlay = false;
-                        f++;
-                    }
                 }                
                 else if (result == 0 || result==2) showMessageBoxPlay = false;
             }
@@ -59,10 +54,7 @@ int main()
 
                 if (exit==1)
                 {
-                    if(e==1)
-                    {
                         break;
-                    }
                 }
                 else if (exit==0 || exit==2) showMessageBoxExit = false;
             }
