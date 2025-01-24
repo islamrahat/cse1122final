@@ -17,8 +17,7 @@ int main()
     int f=1, e=1, a=1;
     while (!WindowShouldClose())
     {
-        // Draw
-        //----------------------------------------------------------------------------------
+        /// Draw
         BeginDrawing();
 
             ClearBackground(RED);
